@@ -1,3 +1,5 @@
+"""this module defines internal paths used by program and is safe to import before dependencies are installed in launch.py"""
+
 import argparse
 import os
 import sys
@@ -8,7 +10,6 @@ sys.argv += shlex.split(commandline_args)
 
 modules_path = os.path.dirname(os.path.realpath(__file__))
 script_path = os.path.dirname(modules_path)
-print(script_path)
 
 sd_configs_path = os.path.join(script_path, "configs")
 sd_default_config = os.path.join(sd_configs_path, "v1-inference.yaml")
